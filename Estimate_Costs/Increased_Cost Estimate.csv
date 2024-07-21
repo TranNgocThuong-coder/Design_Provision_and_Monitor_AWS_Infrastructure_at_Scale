@@ -1,12 +1,12 @@
 ﻿Estimate summary
 Upfront cost,Monthly cost,Total 12 months cost,Currency
-0,20091.729999999996,241100.76,USD
+0,19851.729999999996,238220.76,USD
 ,,* Includes upfront cost
 
 
 Detailed Estimate
 Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
-Increased_Cost Estimate,US East (N. Virginia),,VPN Connection,0,1082.5,12990.00,USD,,"Working days per month (30), Number of Site-to-Site VPN Connections (1), Number of subnet associations (2)"
+Increased_Cost Estimate,US East (N. Virginia),,VPN Connection,0,842.5,10110.00,USD,,"Working days per month (22), Number of Site-to-Site VPN Connections (1), Number of subnet associations (2)"
 Increased_Cost Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,66.6,799.20,USD,,Number of NAT Gateways (2)
 Increased_Cost Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,,"DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
 Increased_Cost Estimate,US East (N. Virginia),,Amazon CloudFront,0,870.4,10444.80,USD,,Data transfer out to internet (10 TB per month)

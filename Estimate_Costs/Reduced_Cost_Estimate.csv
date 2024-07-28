@@ -24,3 +24,83 @@ Reduced_Cost_Estimate,US East (N. Virginia),,AWS Data Transfer,0,0,0.00,USD,,"DT
 
 Acknowledgement
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+
+Long Rational
+Summary of Changes in AWS Cost Estimate
+
+Initial Estimate Summary
+- Upfront Cost: $0
+- Monthly Cost: $8,978.21
+- Total 12 Months Cost: $107,738.52
+- Currency: USD
+
+Reduced Estimate Summary
+- Upfront Cost: $0
+- Monthly Cost: $6,468.09
+- Total 12 Months Cost: $77,617.08
+- Currency: USD
+
+Changes and Impact on Infrastructure
+
+1. VPN Connection
+   - Monthly Cost Reduced: From $457.5 to $347.5
+   - Description: Reduced monthly cost by optimizing the usage or configuration of the VPN connections, 
+   such as adjusting the number of Site-to-Site VPN Connections or reducing the number of subnet associations.
+   - Impact: Slightly reduced redundancy or capacity of VPN connections.
+   - Rationale: This change was implemented to ensure efficient utilization of VPN connections, 
+   thereby lowering costs without compromising the necessary secure connectivity.
+
+
+2. Amazon RDS for PostgreSQL
+   - Monthly Cost Reduced: From $4,987.16 to $2,587.04 (combined)
+   - Description: 
+     - Initial: Two instances with a combined monthly cost of $4,987.16 (one with 100 GB storage and another with 1 TB storage, both Multi-AZ and db.m5.4xlarge).
+     - Reduced: Two instances with a combined monthly cost of $2,587.04 (both with 512 GB storage, Multi-AZ, and db.m5.2xlarge).
+   - Impact: 
+     - Performance: Downgraded instance types from db.m5.4xlarge to db.m5.2xlarge may lead to reduced processing power and memory.
+     - Storage: Reduced storage capacity may impact data storage needs.
+   - Rationale: By right-sizing the database instances and storage, 
+   we were able to significantly cut costs while still maintaining adequate performance and capacity. 
+   This adjustment ensures that resources are not over-provisioned and aligns the database setup more closely with the actual workload demands.
+
+3. Application Servers (Private Subnets) and Web Servers (Public Subnets) - Amazon EC2
+   - Monthly Cost: Remains $1,172.52 each
+   - Description: No changes made.
+
+4. Amazon CloudFront
+   - Monthly Cost: Remains $870.4
+   - Description: No changes made.
+
+5. Network Address Translation (NAT) Gateway
+   - Monthly Cost: Remains $66.6
+   - Description: No changes made.
+
+6. Application Load Balancer
+   - Monthly Cost: Remains $44.96
+   - Description: No changes made.
+
+7. Amazon Route 53
+   - Monthly Cost: Remains $183
+   - Description: No changes made.
+
+8. S3 Standard Storage
+   - Monthly Cost: Remains $23.55
+   - Description: No changes made.
+
+General Optimizations:
+Rationale: In other areas, such as EC2 instances and Data Transfer, no changes were made, indicating that these were already optimized for cost and performance. 
+The focus was primarily on identifying and adjusting over-provisioned resources to better match the operational requirements 
+without affecting the overall performance and reliability of the system.
+These changes collectively contribute to a more cost-efficient infrastructure, 
+balancing the need for performance and reliability with the goal of reducing unnecessary expenses.
+
+### Infrastructure Impact Summary
+
+The primary changes involve the optimization of VPN connections and the downgrade of Amazon RDS for PostgreSQL instances. 
+These changes have resulted in a significant reduction in monthly costs while potentially impacting performance and storage capacity. 
+The rest of the infrastructure, including CloudFront, EC2 instances, NAT Gateway,
+Application Load Balancer, Route 53, and S3 Standard storage, remains unchanged.
+
+
+

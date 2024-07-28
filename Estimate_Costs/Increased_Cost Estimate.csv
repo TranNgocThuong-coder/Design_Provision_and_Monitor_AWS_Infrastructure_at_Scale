@@ -24,3 +24,53 @@ Increased_Cost Estimate,US East (N. Virginia),,AWS Data Transfer,0,0,0.00,USD,,"
 
 Acknowledgement
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+
+### Detailed Rationale for Cost Increase
+
+1. VPN Connection:
+   - Previous Cost: $457.5/month
+   - Increased Cost: $842.5/month
+   - Change: Increased configuration, possibly more VPN connections or subnet associations.
+   - Rationale: Enhanced the VPN setup to ensure robust and secure connections, 
+   accommodating higher traffic and redundancy requirements, leading to increased costs but improved reliability and performance.
+
+2. Amazon EC2 Instances:
+   - Application Servers (Private Subnets)
+     - Previous Cost: $1,172.52/month
+     - Increased Cost: $2,574.12/month
+     - Change: Upgraded instance type from `m5a.4xlarge` to `m5ad.8xlarge`.
+     - Rationale: Upgrading to a more powerful instance type improves computational capacity and performance for application servers, 
+     which is critical for handling increased workloads and ensuring smooth operations.
+   
+   - Web Servers (Public Subnets)
+     - Previous Cost: $1,172.52/month
+     - Increased Cost: $3,777.16/month
+     - Change: Upgraded instance type from `m5a.4xlarge` to `m5ad.12xlarge`.
+     - Rationale: Similar to the application servers, this upgrade provides enhanced performance and scalability for web servers, 
+     ensuring they can handle higher traffic volumes and provide better user experiences.
+
+3. Amazon RDS for PostgreSQL:
+   - Previous Cost: $2,374.52/month per instance
+   - Increased Cost: $5,734.72/month per instance
+   - Change: Upgraded instance type from `db.m5.4xlarge` to `db.m5.8xlarge` and increased storage from 1 TB to 5 TB.
+   - Rationale: Increasing the instance type and storage capacity for RDS improves database performance and storage capabilities, 
+   which is essential for applications requiring large-scale data processing and storage.
+
+4. General Optimizations:
+   - Amazon CloudFront: No changes, indicating that the configuration was already optimized for cost and performance.
+   - Network Address Translation (NAT) Gateway: No changes, suggesting optimal usage.
+   - Amazon Route 53: No changes, maintaining the same DNS setup.
+   - Amazon S3: No changes, keeping the storage configuration constant.
+
+### Summary of Changes and Impact
+
+- Increased Computational Resources: Upgrading EC2 instances for both application and web servers significantly raises monthly costs 
+  but provides better performance, scalability, and reliability.
+- Enhanced Database Capacity: Upgrading RDS instance types and increasing storage supports larger data workloads and higher throughput, 
+  which is vital for data-intensive applications.
+- Improved VPN Setup: Increasing VPN connections or subnet associations enhances security and reliability, 
+  accommodating greater network traffic and redundancy needs.
+
+These changes ensure that the infrastructure can handle higher demands, provide better performance, and offer greater scalability, 
+albeit at a higher cost. The focus is on achieving robust and reliable operations to support business growth and increased workload demands.
